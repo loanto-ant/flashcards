@@ -6,13 +6,12 @@
       <title>Flashcards</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-      <script src="main.js"></script>
    </head>
    <body>
+      <h1>Flashcards</h1>
       <main>
-         <h1>Flashcards</h1>
-         <div class="cards">
-            <div class="card_neu" onclick="neuesSet()">
+         <div class="cards" id="cards">
+            <div class="card_neu" onclick="animation('weg')">
                <h4>Neues Lernset erstellen</h4>
             </div>
             <div class="card">
@@ -23,11 +22,39 @@
             </div>
          </div>
          <div id="neu_erstellen">
-            <input type="text" id="name" placeholder="Thema, Kapitel, Lektion" />
-            <p class="untertitel">Titel</p>
-            <input type="text" id="name" placeholder="Worum geht es?" />
-            <p class="untertitel">Beschreibung (optional)</p>
+            <div id="meta">
+               <input type="text" id="name" placeholder="Thema, Kapitel, Lektion" />
+               <p class="untertitel">Titel</p>
+               <input type="text" id="beschreibung" placeholder="Worum geht es?" />
+               <p class="untertitel">Beschreibung (optional)</p>
+               <input type="text" id="bild" placeholder="Eigenes Hintergrundbild" />
+               <p class="untertitel">Bild (optional)</p>
+            </div>
+            <div id="content">
+               <div>
+                  <input type="text" class="begriff" />
+                  <p class="untertitel">Begriff</p>
+                  <input type="text" class="definition" />
+                  <p class="untertitel">Definition</p>
+               </div>
+               <div>
+                  <input type="text" class="begriff" />
+                  <p class="untertitel">Begriff</p>
+                  <input type="text" class="definition" />
+                  <p class="untertitel">Definition</p>
+               </div>
+               <div>
+                  <input type="text" class="begriff" />
+                  <p class="untertitel">Begriff</p>
+                  <input type="text" class="definition" />
+                  <p class="untertitel">Definition</p>
+               </div>
+            </div>
+            <div class="card_neu" onclick="fertig()">
+               <h4>Fertig</h4>
+            </div>
          </div>
       </main>
+      <script src="main.js"></script>
    </body>
 </html>

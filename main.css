@@ -1,53 +1,74 @@
+#neu_erstellen {
+  display: none;
+}
 #neu_erstellen input {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid white;
-  width: 60%;
+  border-bottom: 3px solid #285b86;
+  width: 100%;
   font-size: 1.2rem;
   line-height: 1.5rem;
 }
 #neu_erstellen input:focus {
-  border-bottom: 3px solid white;
+  border-bottom: 4px solid #285b86;
 }
 #neu_erstellen input:focus-visible {
   outline: none;
 }
 #neu_erstellen input::-moz-placeholder {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 #neu_erstellen input:-ms-input-placeholder {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 #neu_erstellen input::placeholder {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .untertitel {
   font-size: 0.9rem;
   text-transform: uppercase;
-  margin: 2px 0px 5px 0px;
+  margin: 2px 0px 13px 0px;
+}
+
+#content {
+  margin-top: 30px;
+}
+#content div {
+  background-color: white;
+  padding: 14px;
+  box-shadow: -3px 5px 8px rgba(199, 199, 199, 0.74);
+  margin: 12px 0px;
 }
 
 * {
   padding: 0;
   margin: 0;
-  color: #ffffff;
+  color: black;
   font-family: "Gill Sans MT", sans-serif;
 }
 
 body {
-  background-color: #285b86;
+  background-color: rgb(243, 243, 243);
   font-size: 22px;
 }
 
 main {
   padding: 5%;
   width: 90%;
+  position: absolute;
+  top: 65px;
 }
 
 h1 {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-size: 2.4rem;
+  background-color: white;
+  color: #285b86;
+  padding: 10px 20px;
+  width: 100%;
+  box-shadow: -3px 5px 8px rgba(199, 199, 199, 0.74);
+  position: fixed;
 }
 
 button {
@@ -81,22 +102,23 @@ summary {
 }
 
 .card {
-  border: 2px solid white;
   border-radius: 8px;
   height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-image: url(https://images.unsplash.com/photo-1499002238440-d264edd596ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+  background-image: url(https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   margin-bottom: 20px;
+  box-shadow: -3px 5px 8px rgba(199, 199, 199, 0.74);
 }
 .card h4 {
-  background-color: white;
-  color: black;
+  background-color: #285b86;
+  color: white;
   padding: 15px 8px;
   cursor: pointer;
+  border-radius: 0px 0px 8px 8px;
 }
 
 .card_neu {
@@ -105,26 +127,35 @@ summary {
   height: fit-content;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
-  border: 2px solid white;
-  border-radius: 8px;
+  box-shadow: -3px 5px 8px rgba(199, 199, 199, 0.74);
   margin-bottom: 20px;
+  border-radius: 8px;
 }
 .card_neu h4 {
-  background-color: white;
-  color: black;
+  background-color: #285b86;
+  color: white;
   padding: 15px 8px;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .karten_weg {
   -webkit-animation-name: karten_weg;
           animation-name: karten_weg;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
+  position: relative;
+}
+
+.karten_her {
+  -webkit-animation-name: karten_her;
+          animation-name: karten_her;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   position: relative;
 }
 
@@ -147,6 +178,26 @@ summary {
   to {
     top: 20vh;
     opacity: 0;
+  }
+}
+@-webkit-keyframes karten_her {
+  from {
+    opacity: 0;
+    top: 20vh;
+  }
+  to {
+    top: 0vh;
+    opacity: 1;
+  }
+}
+@keyframes karten_her {
+  from {
+    opacity: 0;
+    top: 20vh;
+  }
+  to {
+    top: 0vh;
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */

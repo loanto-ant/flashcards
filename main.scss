@@ -1,27 +1,36 @@
 @import "neuErstellen";
+@import "variablen";
 * {
    padding: 0;
    margin: 0;
-   color: #ffffff;
+   color: $textDunkel;
    font-family: "Gill Sans MT", sans-serif;
 }
 
 body {
-   background-color: #285b86;
+   background-color: $hintergrundDunkel;
    font-size: 22px;
 }
 main {
    padding: 5%;
    width: 90%;
+   position: absolute;
+   top: 65px;
 }
 h1 {
-   margin-bottom: 30px;
+   margin-bottom: 10px;
    font-size: 2.4rem;
+   background-color: $hintergrundHell;
+   color: $akzent;
+   padding: 10px 20px;
+   width: 100%;
+   box-shadow: $schatten;
+   position: fixed;
 }
 button {
    padding: 7px 10px;
    background-color: transparent;
-   border: 2px solid white;
+   border: 2px solid $border;
    border-radius: 5px;
 }
 #lernsets ul {
@@ -46,42 +55,49 @@ summary {
    font-weight: 700;
 }
 .card {
-   border: 2px solid white;
    border-radius: 8px;
    height: 180px;
    display: flex;
    flex-direction: column;
    justify-content: flex-end;
-   background-image: url(https://images.unsplash.com/photo-1499002238440-d264edd596ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+   background-image: url(https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80);
    background-size: cover;
-   background-position: center;
+   background-position: bottom;
    margin-bottom: 20px;
+   box-shadow: $schatten;
 
    h4 {
-      background-color: white;
-      color: black;
+      background-color: $akzent;
+      color: $textHell;
       padding: 15px 8px;
       cursor: pointer;
+      border-radius: 0px 0px 8px 8px;
    }
 }
 .card_neu {
    height: fit-content;
    animation-play-state: paused;
-   border: 2px solid white;
-   border-radius: 8px;
+   box-shadow: $schatten;
    margin-bottom: 20px;
+   border-radius: 8px;
    h4 {
-      background-color: white;
-      color: black;
+      background-color: $akzent;
+      color: $textHell;
       padding: 15px 8px;
       cursor: pointer;
+      border-radius: 8px;
    }
 }
 .karten_weg {
    animation-name: karten_weg;
-   animation-duration: 0.8s;
+   animation-duration: 0.6s;
    animation-fill-mode: forwards;
-   animation-timing-function: ease-in;
+   position: relative;
+}
+.karten_her {
+   animation-name: karten_her;
+   animation-duration: 0.6s;
+   animation-fill-mode: forwards;
    position: relative;
 }
 @keyframes karten_weg {
@@ -92,6 +108,16 @@ summary {
    to {
       top: 20vh;
       opacity: 0;
+   }
+}
+@keyframes karten_her {
+   from {
+      opacity: 0;
+      top: 20vh;
+   }
+   to {
+      top: 0vh;
+      opacity: 1;
    }
 }
 
